@@ -7,28 +7,21 @@ export default function Home() {
   const {locale} = useRouter();
 
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <Link href="/other-page">
+    <div>
+        <Link href="/">
           <h1 className={styles.title}>
-              MOVE TO ANOTHER PAGE
+              MOVE TO INDEX
           </h1>
         </Link>
           <h1 className={styles.title}>
               CURRENT LANG {locale}
           </h1>
-      </main>
-    </div>
+      </div>
   )
 }
 
 export async function getServerSideProps() {
-  console.log('getServerSideProps index')
+  console.log('getServerSideProps other-page')
   return {
     props: {}, 
   }
