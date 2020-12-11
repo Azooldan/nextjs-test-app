@@ -5,10 +5,10 @@ import Link from 'next/link';
 
 export default function Home() {
   const {locale} = useRouter();
-
+  console.log(useRouter())
   return (
     <div>
-        <Link href="/">
+        <Link href="/" locale={locale}>
           <h1 className={styles.title}>
               MOVE TO INDEX
           </h1>

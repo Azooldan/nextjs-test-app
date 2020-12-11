@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 export default function Home() {
   const {locale} = useRouter();
+  console.log(useRouter())
 
   return (
     <div className={styles.container}>
@@ -14,7 +15,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Link href="/other-page">
+        <Link href="/other-page" locale={locale}>
           <h1 className={styles.title}>
               MOVE TO ANOTHER PAGE
           </h1>
